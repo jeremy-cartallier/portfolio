@@ -3,56 +3,81 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import Pill from '../components/Pill.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="À propos | Jérémy Cartallier" description="Page à propos Jérémy Cartallier">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				title="À propos"
+				tagline="Une description de mon parcours professionnel et de mes compétences."
 			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">Parcours</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+						J'ai débuté le développement par une formation généraliste à l'IUT qui m'a fait découvrir l'informatique de manière théorique.
 					</p>
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
+						Mes différentes expériences professionnelles m'ont ensuite permis de me spécialiser dans le développement web. J'ai ainsi intégré une ESN et rejoint leur BU e-commerce. J'ai pu développer en équipe sur des projets d'envergures.
 					</p>
 					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Depuis 2 ans, j'ai décidé de me mettre à mon compte en tant que développeur indépendant et formateur.
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">Formation</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<p>DUT Informatique à l'IUT Lyon 1</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
+				<h2 class="section-title">Compétences</h2>
+				<div class="content skills-container">
+					<div>
+						<span>Front-end</span>
+						<div class="skills">
+							<Pill>HTML/CSS</Pill>
+							<Pill>SASS</Pill>
+							<Pill>Tailwind</Pill>
+							<Pill>JS/TS</Pill>
+							<Pill>jQuery</Pill>
+							<Pill>Webpack</Pill>
+							<Pill>Babel</Pill>
+							<Pill>Vite</Pill>
+							<Pill>Jest/Vitest</Pill>
+							<Pill>React</Pill>
+							<Pill>Storybook</Pill>
+							<Pill>Redux</Pill>
+							<Pill>Zustand</Pill>
+							<Pill>Next.js</Pill>
+						</div>
+					</div>
+					<div>
+						<span>Back-end</span>
+						<div class="skills">
+							<Pill>PHP</Pill>
+							<Pill>Nodejs</Pill>
+							<Pill>Express</Pill>
+							<Pill>SQL</Pill>
+							<Pill>MongoDB</Pill>
+							<Pill>JWT</Pill>
+						</div>
+					</div>
+					<div>
+						<span>Meta projet</span>
+						<div class="skills">
+							<Pill>Git/Github</Pill>
+							<Pill>Scrum</Pill>
+							<Pill>Git/Github</Pill>
+							<Pill>Docker</Pill>
+							<Pill>CI/CD</Pill>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -66,6 +91,18 @@ import Hero from '../components/Hero.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 3.5rem;
+	}
+
+	.skills-container {
+		display: flex;
+        flex-direction: column;
+		gap: 13px;
+	}
+	.skills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 10px;
 	}
 
 	img {
