@@ -8,8 +8,9 @@ description: |
 tags:
   - React.js
   - Next.js
-  - Redux
+  - Tailwind
 
 ---
 
-Lien du github du projet : [Github](https://www.cleor.com/)
+Lien du github du projet : [Github](https://github.com/jeremy-cartallier/portfolio)
+Lien du site en production : [https://next-movies-cyan.vercel.app](https://next-movies-cyan.vercel.app/now_playing/1)
