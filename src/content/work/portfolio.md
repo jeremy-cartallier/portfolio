@@ -9,5 +9,5 @@ tags:
   - Astro
 ---
 
-Lien du github du projet : [Github](https://github.com/jeremy-cartallier/portfolio)
+Lien du github du projet : [Github](https://github.com/jeremy-cartallier/portfolio)\
 Lien du site en production : [jeremy-cartallier.fr](https://www.jeremy-cartallier.fr/)

@@ -12,5 +12,5 @@ tags:
 
 ---
 
-Lien du github du projet : [Github](https://github.com/jeremy-cartallier/next-movies)
+Lien du github du projet : [Github](https://github.com/jeremy-cartallier/next-movies)\
 Lien du site en production : [https://next-movies-cyan.vercel.app](https://next-movies-cyan.vercel.app/now_playing/1)
