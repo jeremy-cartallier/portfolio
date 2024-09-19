@@ -1,6 +1,12 @@
 ---
 import '../styles/global.css';
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
@@ -16,7 +22,9 @@ const {
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y29Z324GMS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(...args: any[]) {
+    window.dataLayer.push(args);
+  }
   gtag('js', new Date());
   gtag('config', 'G-Y29Z324GMS');
 </script>
