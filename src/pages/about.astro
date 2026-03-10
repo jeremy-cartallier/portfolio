@@ -6,62 +6,136 @@ import Hero from '../components/Hero.astro';
 import Pill from '../components/Pill.astro';
 ---
 
-<BaseLayout title="À propos | Jérémy Cartallier" description="Page à propos Jérémy Cartallier">
+<BaseLayout title="À propos | Jérémy Cartallier" description="Parcours, expériences et compétences de Jérémy Cartallier, développeur React.">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
 				title="À propos"
-				tagline="Une description de mon parcours professionnel et de mes compétences."
+				tagline="Développeur front-end spécialisé en React et TypeScript, avec une expérience construite entre produit, e-commerce et missions freelance."
 			>
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Parcours</h2>
+				<h2 class="section-title">Présentation</h2>
 				<div class="content">
 					<p>
-						J'ai débuté le développement par une formation généraliste à l'IUT qui m'a fait découvrir l'informatique de manière théorique.
+						J'accompagne les entreprises dans la conception et l'évolution d'applications front-end modernes, avec un socle technique solide et une attention constante portée à l'usage.
 					</p>
 					<p>
-						Mes différentes expériences professionnelles m'ont ensuite permis de me spécialiser dans le développement web. J'ai ainsi intégré une ESN et rejoint leur BU e-commerce. J'ai pu développer en équipe sur des projets d'envergures.
+						J'ai contribué à des projets pour Sociabble, Navya, The Kooples, Cleor ou encore V33, dans des contextes où la performance, la maintenabilité et la qualité d'exécution comptent réellement.
 					</p>
 					<p>
-						Depuis 2 ans, j'ai décidé de me mettre à mon compte en tant que développeur indépendant et formateur.
+						Aujourd'hui, je recherche des environnements où je peux apporter une expertise React concrète, collaborer étroitement avec les équipes produit et design, et faire avancer des produits ambitieux dans la durée.
 					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Expériences</h2>
+				<div class="content">
+					<div class="experience">
+						<h3>Développeur React - Sociabble</h3>
+						<p class="period">CDI · Janvier 2025 - Aujourd'hui · Lyon (Hybride)</p>
+						<p>
+							Participation à la refonte de l'application web et mobile afin d'améliorer les performances, la maintenabilité du code et la cohérence de l'expérience utilisateur.
+						</p>
+						<ul>
+							<li>Développement d'interfaces interactives et scalables avec React, TypeScript, Zustand, TailwindCSS, PrimeReact</li>
+							<li>Refonte de l'application mobile en React Native, garantissant une UX cohérente sur iOS et Android</li>
+							<li>Gestion de l'état et routage avec Zustand et Tanstack Router</li>
+							<li>Déploiement et suivi sur Azure, respect des bonnes pratiques CI/CD</li>
+						</ul>
+					</div>
+					<div class="experience">
+						<h3>Freelance - Développeur & Formateur</h3>
+						<p class="period">Freelance · Février 2022 - Aujourd'hui · À distance</p>
+						<p>
+							Réalisation de missions en développement front-end et accompagnement de développeurs en formation sur des sujets React, JavaScript et TypeScript.
+						</p>
+						<ul>
+							<li>Développement d'applications web performantes et maintenables pour des clients variés</li>
+							<li>Formation sur React, JavaScript et TypeScript pour OpenClassrooms, Le Wagon et IPSSI</li>
+							<li>Accompagnement complet des projets clients, de la conception à la mise en production</li>
+						</ul>
+					</div>
+					<div class="experience">
+						<h3>Développeur React - Navya Mobility</h3>
+						<p class="period">Indépendant · Octobre 2024 - Janvier 2025 · Villeurbanne (Hybride)</p>
+						<p>
+							Développement d'un outil de suivi et de visualisation de flotte, conçu pour rendre les données clés plus lisibles et actionnables.
+						</p>
+						<ul>
+							<li>Conception et développement des composants UI avec React, Redux, TypeScript, MUI et Storybook</li>
+							<li>Tests unitaires et d'intégration avec Jest et Cypress</li>
+							<li>Visualisation des données via Recharts</li>
+						</ul>
+					</div>
+					<div class="experience">
+						<h3>Développeur Web - Synolia</h3>
+						<p class="period">Novembre 2018 - Décembre 2021 · Lyon</p>
+						<p>
+							Développement et maintenance de sites e-commerce pour plusieurs grands comptes, avec un niveau d'exigence élevé sur la performance, la fiabilité et l'évolutivité.
+						</p>
+						<ul>
+							<li>Développement front-end et back-end sur Adobe Commerce (Magento), PHP, React et jQuery</li>
+							<li>Intégration de fonctionnalités sur mesure pour répondre aux besoins clients</li>
+							<li>Optimisation des performances et amélioration de l'expérience utilisateur</li>
+						</ul>
+					</div>
+					<div class="experience">
+						<h3>Stage Développeur Web - Ice Development Lyon</h3>
+						<p class="period">Avril 2018 - Juin 2018 · Lyon</p>
+						<p>
+							Création d'un outil interne visant à simplifier les processus de l'entreprise, avec une première mise en pratique concrète du développement web en environnement professionnel.
+						</p>
+					</div>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Formation</h2>
 				<div class="content">
-					<p>DUT Informatique à l'IUT Lyon 1</p>
+					<p>DUT Informatique, IUT Lyon 1.</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Compétences</h2>
+				<h2 class="section-title">Compétences clés</h2>
 				<div class="content skills-container">
 					<div>
 						<span>Front-end</span>
 						<div class="skills">
-							<Pill>HTML/CSS</Pill>
-							<Pill>SASS</Pill>
+							<Pill>React.js</Pill>
+							<Pill>React Native</Pill>
+							<Pill>TypeScript</Pill>
+							<Pill>HTML5/CSS3</Pill>
 							<Pill>Tailwind</Pill>
-							<Pill>JS/TS</Pill>
-							<Pill>jQuery</Pill>
-							<Pill>Webpack</Pill>
-							<Pill>Babel</Pill>
-							<Pill>Vite</Pill>
-							<Pill>Jest/Vitest</Pill>
-							<Pill>React</Pill>
-							<Pill>Storybook</Pill>
+							<Pill>SASS/LESS</Pill>
+							<Pill>JavaScript</Pill>
 							<Pill>Redux</Pill>
 							<Pill>Zustand</Pill>
+							<Pill>TanStack Query</Pill>
+							<Pill>TanStack Router</Pill>
+							<Pill>Context API</Pill>
 							<Pill>Next.js</Pill>
+							<Pill>MUI</Pill>
+							<Pill>PrimeReact</Pill>
+							<Pill>Storybook</Pill>
 						</div>
 					</div>
 					<div>
-						<span>Back-end</span>
+						<span>Tests & Qualité</span>
 						<div class="skills">
+							<Pill>Jest</Pill>
+							<Pill>Vitest</Pill>
+							<Pill>Cypress</Pill>
+							<Pill>Tests unitaires</Pill>
+							<Pill>Tests d'intégration</Pill>
+						</div>
+					</div>
+					<div>
+						<span>APIs & Back-end</span>
+						<div class="skills">
+							<Pill>REST API</Pill>
 							<Pill>PHP</Pill>
-							<Pill>Nodejs</Pill>
+							<Pill>Node.js</Pill>
 							<Pill>Express</Pill>
 							<Pill>SQL</Pill>
 							<Pill>MongoDB</Pill>
@@ -69,13 +143,14 @@ import Pill from '../components/Pill.astro';
 						</div>
 					</div>
 					<div>
-						<span>Meta projet</span>
+						<span>Outils & DevOps</span>
 						<div class="skills">
 							<Pill>Git/Github</Pill>
-							<Pill>Scrum</Pill>
-							<Pill>Git/Github</Pill>
-							<Pill>Docker</Pill>
+							<Pill>Azure</Pill>
 							<Pill>CI/CD</Pill>
+							<Pill>Docker</Pill>
+							<Pill>Vite</Pill>
+							<Pill>Scrum</Pill>
 						</div>
 					</div>
 				</div>
@@ -98,6 +173,32 @@ import Pill from '../components/Pill.astro';
         flex-direction: column;
 		gap: 13px;
 	}
+
+	.experience {
+		margin-bottom: 2rem;
+	}
+
+	.experience h3 {
+		color: var(--gray-0);
+		margin-bottom: 0.25rem;
+	}
+
+	.experience .period {
+		color: var(--gray-400);
+		font-size: 0.9rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.experience ul {
+		margin-top: 0.5rem;
+		padding-left: 1.5rem;
+	}
+
+	.experience ul li {
+		margin-bottom: 0.25rem;
+		color: var(--gray-300);
+	}
+
 	.skills {
 		display: flex;
 		flex-wrap: wrap;

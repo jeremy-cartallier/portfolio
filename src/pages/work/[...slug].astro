@@ -32,7 +32,7 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
+					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Retour aux projets</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
@@ -72,12 +72,14 @@ const { Content } = await entry.render();
 		padding: 0.5rem;
 		gap: 1.5rem;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 	}
 
 	.tags {
 		display: flex;
 		gap: 0.5rem;
+		flex-wrap: wrap;
+		max-width: 100%;
 	}
 
 	.description {
@@ -142,6 +144,15 @@ const { Content } = await entry.render();
 		.details {
 			flex-direction: row;
 			gap: 2.5rem;
+			align-items: flex-start;
+		}
+
+		.tags {
+			flex: 1 1 28rem;
+		}
+
+		.description {
+			flex: 0 1 54ch;
 		}
 
 		.content :global(blockquote) {
