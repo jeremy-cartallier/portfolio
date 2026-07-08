@@ -4,156 +4,200 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import Pill from '../components/Pill.astro';
+
+const experiences = [
+	{
+		role: 'Développeur React',
+		company: 'Sociabble',
+		type: 'CDI',
+		period: 'Janvier 2025 — Aujourd’hui',
+		location: 'Lyon (Hybride)',
+		summary:
+			"Participation à la refonte de l'application web et mobile pour gagner en performance, en maintenabilité et en cohérence produit.",
+		highlights: [
+			'Interfaces interactives et scalables avec React, TypeScript, Zustand, TailwindCSS et PrimeReact',
+			'Refonte de l’application mobile en React Native, UX cohérente sur iOS et Android',
+			'Gestion de l’état et routage avec Zustand et TanStack Router',
+			'Déploiement et suivi sur Azure, dans le respect des bonnes pratiques CI/CD',
+		],
+	},
+	{
+		role: 'Développeur & Formateur',
+		company: 'Freelance',
+		type: 'Indépendant',
+		period: 'Février 2022 — Aujourd’hui',
+		location: 'À distance',
+		summary:
+			'Missions de développement front-end et accompagnement de développeurs en formation sur React, JavaScript et TypeScript.',
+		highlights: [
+			'Applications web performantes et maintenables pour des clients variés',
+			'Formations React, JavaScript et TypeScript pour OpenClassrooms, Le Wagon et IPSSI',
+			'Accompagnement de bout en bout, de la conception à la mise en production',
+		],
+	},
+	{
+		role: 'Développeur React',
+		company: 'Navya Mobility',
+		type: 'Indépendant',
+		period: 'Octobre 2024 — Janvier 2025',
+		location: 'Villeurbanne (Hybride)',
+		summary:
+			'Développement d’un outil de suivi et de visualisation de flotte, pour rendre les données clés plus lisibles et actionnables.',
+		highlights: [
+			'Composants UI avec React, Redux, TypeScript, MUI et Storybook',
+			'Tests unitaires et d’intégration avec Jest et Cypress',
+			'Visualisation des données via Recharts',
+		],
+	},
+	{
+		role: 'Développeur Web',
+		company: 'Synolia',
+		type: 'CDI',
+		period: 'Novembre 2018 — Décembre 2021',
+		location: 'Lyon',
+		summary:
+			'Développement et maintenance de sites e-commerce pour plusieurs grands comptes, avec un fort niveau d’exigence sur la performance et la fiabilité.',
+		highlights: [
+			'Front-end et back-end sur Adobe Commerce (Magento), PHP, React et jQuery',
+			'Intégration de fonctionnalités sur mesure selon les besoins clients',
+			'Optimisation des performances et de l’expérience utilisateur',
+		],
+	},
+	{
+		role: 'Stage Développeur Web',
+		company: 'Ice Development Lyon',
+		type: 'Stage',
+		period: 'Avril 2018 — Juin 2018',
+		location: 'Lyon',
+		summary:
+			'Création d’un outil interne pour simplifier les processus de l’entreprise : première mise en pratique concrète du développement web en entreprise.',
+		highlights: [],
+	},
+];
+
+const skills = [
+	{
+		title: 'Front-end',
+		items: [
+			'React.js',
+			'React Native',
+			'TypeScript',
+			'JavaScript',
+			'Next.js',
+			'HTML5/CSS3',
+			'Tailwind',
+			'SASS/LESS',
+			'Redux',
+			'Zustand',
+			'TanStack Query',
+			'TanStack Router',
+			'MUI',
+			'PrimeReact',
+			'Storybook',
+		],
+	},
+	{
+		title: 'Tests & Qualité',
+		items: ['Jest', 'Vitest', 'Cypress', 'Tests unitaires', 'Tests d’intégration'],
+	},
+	{
+		title: 'APIs & Back-end',
+		items: ['REST API', 'Node.js', 'Express', 'PHP', 'SQL', 'MongoDB', 'JWT'],
+	},
+	{
+		title: 'Outils & DevOps',
+		items: ['Git/GitHub', 'Azure', 'CI/CD', 'Docker', 'Vite', 'Scrum'],
+	},
+];
 ---
 
-<BaseLayout title="À propos | Jérémy Cartallier" description="Parcours, expériences et compétences de Jérémy Cartallier, développeur React.">
+<BaseLayout
+	title="À propos | Jérémy Cartallier"
+	description="Parcours, expériences et compétences de Jérémy Cartallier, développeur React et TypeScript basé à Lyon."
+>
 	<div class="stack gap-20">
-		<main class="wrapper about">
+		<main class="wrapper about stack gap-15">
 			<Hero
 				title="À propos"
-				tagline="Développeur front-end spécialisé en React et TypeScript, avec une expérience construite entre produit, e-commerce et missions freelance."
-			>
-			</Hero>
+				tagline="Développeur front-end React & TypeScript, avec une expérience construite entre produit, e-commerce et missions freelance."
+				align="start"
+			/>
 
-			<section>
-				<h2 class="section-title">Présentation</h2>
-				<div class="content">
+			<section class="intro">
+				<p class="lead">
+					J’accompagne les entreprises dans la conception et l’évolution d’applications front-end
+					modernes, avec un socle technique solide et une attention constante portée à l’usage.
+				</p>
+				<div class="intro-details stack gap-4">
 					<p>
-						J'accompagne les entreprises dans la conception et l'évolution d'applications front-end modernes, avec un socle technique solide et une attention constante portée à l'usage.
+						J’ai contribué à des projets pour Sociabble, Navya, The Kooples, Cleor ou encore V33,
+						dans des contextes où la performance, la maintenabilité et la qualité d’exécution
+						comptent réellement.
 					</p>
 					<p>
-						J'ai contribué à des projets pour Sociabble, Navya, The Kooples, Cleor ou encore V33, dans des contextes où la performance, la maintenabilité et la qualité d'exécution comptent réellement.
-					</p>
-					<p>
-						Aujourd'hui, je recherche des environnements où je peux apporter une expertise React concrète, collaborer étroitement avec les équipes produit et design, et faire avancer des produits ambitieux dans la durée.
+						Aujourd’hui, je recherche des environnements où apporter une expertise React concrète,
+						collaborer étroitement avec les équipes produit et design, et faire avancer des produits
+						ambitieux dans la durée.
 					</p>
 				</div>
 			</section>
-			<section>
-				<h2 class="section-title">Expériences</h2>
-				<div class="content">
-					<div class="experience">
-						<h3>Développeur React - Sociabble</h3>
-						<p class="period">CDI · Janvier 2025 - Aujourd'hui · Lyon (Hybride)</p>
-						<p>
-							Participation à la refonte de l'application web et mobile afin d'améliorer les performances, la maintenabilité du code et la cohérence de l'expérience utilisateur.
-						</p>
-						<ul>
-							<li>Développement d'interfaces interactives et scalables avec React, TypeScript, Zustand, TailwindCSS, PrimeReact</li>
-							<li>Refonte de l'application mobile en React Native, garantissant une UX cohérente sur iOS et Android</li>
-							<li>Gestion de l'état et routage avec Zustand et Tanstack Router</li>
-							<li>Déploiement et suivi sur Azure, respect des bonnes pratiques CI/CD</li>
-						</ul>
-					</div>
-					<div class="experience">
-						<h3>Freelance - Développeur & Formateur</h3>
-						<p class="period">Freelance · Février 2022 - Aujourd'hui · À distance</p>
-						<p>
-							Réalisation de missions en développement front-end et accompagnement de développeurs en formation sur des sujets React, JavaScript et TypeScript.
-						</p>
-						<ul>
-							<li>Développement d'applications web performantes et maintenables pour des clients variés</li>
-							<li>Formation sur React, JavaScript et TypeScript pour OpenClassrooms, Le Wagon et IPSSI</li>
-							<li>Accompagnement complet des projets clients, de la conception à la mise en production</li>
-						</ul>
-					</div>
-					<div class="experience">
-						<h3>Développeur React - Navya Mobility</h3>
-						<p class="period">Indépendant · Octobre 2024 - Janvier 2025 · Villeurbanne (Hybride)</p>
-						<p>
-							Développement d'un outil de suivi et de visualisation de flotte, conçu pour rendre les données clés plus lisibles et actionnables.
-						</p>
-						<ul>
-							<li>Conception et développement des composants UI avec React, Redux, TypeScript, MUI et Storybook</li>
-							<li>Tests unitaires et d'intégration avec Jest et Cypress</li>
-							<li>Visualisation des données via Recharts</li>
-						</ul>
-					</div>
-					<div class="experience">
-						<h3>Développeur Web - Synolia</h3>
-						<p class="period">Novembre 2018 - Décembre 2021 · Lyon</p>
-						<p>
-							Développement et maintenance de sites e-commerce pour plusieurs grands comptes, avec un niveau d'exigence élevé sur la performance, la fiabilité et l'évolutivité.
-						</p>
-						<ul>
-							<li>Développement front-end et back-end sur Adobe Commerce (Magento), PHP, React et jQuery</li>
-							<li>Intégration de fonctionnalités sur mesure pour répondre aux besoins clients</li>
-							<li>Optimisation des performances et amélioration de l'expérience utilisateur</li>
-						</ul>
-					</div>
-					<div class="experience">
-						<h3>Stage Développeur Web - Ice Development Lyon</h3>
-						<p class="period">Avril 2018 - Juin 2018 · Lyon</p>
-						<p>
-							Création d'un outil interne visant à simplifier les processus de l'entreprise, avec une première mise en pratique concrète du développement web en environnement professionnel.
-						</p>
-					</div>
+
+			<section class="block stack gap-8">
+				<h2 class="heading">Expériences</h2>
+				<ol class="timeline">
+					{
+						experiences.map((xp) => (
+							<li class="timeline-item">
+								<span class="dot" aria-hidden="true" />
+								<article class="xp-card">
+									<div class="xp-top">
+										<h3>
+											{xp.role} <span class="at">·</span> <span class="company">{xp.company}</span>
+										</h3>
+										<span class="period">{xp.period}</span>
+									</div>
+									<p class="meta">
+										{xp.type} · {xp.location}
+									</p>
+									<p class="summary">{xp.summary}</p>
+									{xp.highlights.length > 0 && (
+										<ul class="highlights">
+											{xp.highlights.map((h) => (
+												<li>{h}</li>
+											))}
+										</ul>
+									)}
+								</article>
+							</li>
+						))
+					}
+				</ol>
+			</section>
+
+			<section class="block stack gap-8">
+				<h2 class="heading">Compétences clés</h2>
+				<div class="skills-grid">
+					{
+						skills.map((group) => (
+							<div class="skill-group">
+								<h3>{group.title}</h3>
+								<div class="skills">
+									{group.items.map((item) => (
+										<Pill>{item}</Pill>
+									))}
+								</div>
+							</div>
+						))
+					}
 				</div>
 			</section>
-			<section>
-				<h2 class="section-title">Formation</h2>
-				<div class="content">
-					<p>DUT Informatique, IUT Lyon 1.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Compétences clés</h2>
-				<div class="content skills-container">
-					<div>
-						<span>Front-end</span>
-						<div class="skills">
-							<Pill>React.js</Pill>
-							<Pill>React Native</Pill>
-							<Pill>TypeScript</Pill>
-							<Pill>HTML5/CSS3</Pill>
-							<Pill>Tailwind</Pill>
-							<Pill>SASS/LESS</Pill>
-							<Pill>JavaScript</Pill>
-							<Pill>Redux</Pill>
-							<Pill>Zustand</Pill>
-							<Pill>TanStack Query</Pill>
-							<Pill>TanStack Router</Pill>
-							<Pill>Context API</Pill>
-							<Pill>Next.js</Pill>
-							<Pill>MUI</Pill>
-							<Pill>PrimeReact</Pill>
-							<Pill>Storybook</Pill>
-						</div>
-					</div>
-					<div>
-						<span>Tests & Qualité</span>
-						<div class="skills">
-							<Pill>Jest</Pill>
-							<Pill>Vitest</Pill>
-							<Pill>Cypress</Pill>
-							<Pill>Tests unitaires</Pill>
-							<Pill>Tests d'intégration</Pill>
-						</div>
-					</div>
-					<div>
-						<span>APIs & Back-end</span>
-						<div class="skills">
-							<Pill>REST API</Pill>
-							<Pill>PHP</Pill>
-							<Pill>Node.js</Pill>
-							<Pill>Express</Pill>
-							<Pill>SQL</Pill>
-							<Pill>MongoDB</Pill>
-							<Pill>JWT</Pill>
-						</div>
-					</div>
-					<div>
-						<span>Outils & DevOps</span>
-						<div class="skills">
-							<Pill>Git/Github</Pill>
-							<Pill>Azure</Pill>
-							<Pill>CI/CD</Pill>
-							<Pill>Docker</Pill>
-							<Pill>Vite</Pill>
-							<Pill>Scrum</Pill>
-						</div>
-					</div>
-				</div>
+
+			<section class="block stack gap-8">
+				<h2 class="heading">Formation</h2>
+				<article class="formation-card">
+					<h3>DUT Informatique</h3>
+					<p>IUT Lyon 1</p>
+				</article>
 			</section>
 		</main>
 
@@ -163,96 +207,246 @@ import Pill from '../components/Pill.astro';
 
 <style>
 	.about {
+		padding-top: 1rem;
+	}
+
+	/* Intro */
+	.intro {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.lead {
+		font-family: var(--font-brand);
+		font-size: var(--text-lg);
+		font-weight: 500;
+		line-height: 1.4;
+		color: var(--gray-0);
+	}
+
+	.intro-details {
+		color: var(--gray-300);
+	}
+
+	@media (min-width: 50em) {
+		.intro {
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
+			align-items: start;
+		}
+
+		.lead {
+			font-size: var(--text-xl);
+		}
+	}
+
+	/* Section headings */
+	.heading {
+		position: relative;
+		font-size: var(--text-2xl);
+		color: var(--gray-0);
+		padding-bottom: 0.75rem;
+		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.heading::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		width: 3rem;
+		height: 2px;
+		background: var(--accent-regular);
+	}
+
+	@media (min-width: 50em) {
+		.heading {
+			font-size: var(--text-3xl);
+		}
+	}
+
+	/* Timeline */
+	.timeline {
+		list-style: none;
+		padding: 0;
+		margin: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 3.5rem;
+		gap: 1.5rem;
 	}
 
-	.skills-container {
+	.timeline-item {
+		position: relative;
+		padding-left: 1.75rem;
+	}
+
+	.timeline-item::before {
+		content: '';
+		position: absolute;
+		left: 0.3rem;
+		top: 1.1rem;
+		bottom: -1.5rem;
+		width: 2px;
+		background: var(--gray-800);
+	}
+
+	.timeline-item:last-child::before {
+		display: none;
+	}
+
+	.dot {
+		position: absolute;
+		left: 0;
+		top: 0.65rem;
+		width: 0.7rem;
+		height: 0.7rem;
+		border-radius: 999rem;
+		background: var(--accent-regular);
+		box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-regular) 18%, transparent);
+	}
+
+	.xp-card {
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		box-shadow: var(--shadow-sm);
+		transition:
+			border-color var(--theme-transition),
+			box-shadow var(--theme-transition);
+	}
+
+	.xp-card:hover {
+		border-color: color-mix(in srgb, var(--accent-regular) 40%, var(--gray-800));
+		box-shadow: var(--shadow-md);
+	}
+
+	.xp-top {
 		display: flex;
-        flex-direction: column;
-		gap: 13px;
+		flex-wrap: wrap;
+		gap: 0.25rem 1rem;
+		justify-content: space-between;
+		align-items: baseline;
 	}
 
-	.experience {
-		margin-bottom: 2rem;
-	}
-
-	.experience h3 {
+	.xp-top h3 {
+		font-size: var(--text-lg);
 		color: var(--gray-0);
-		margin-bottom: 0.25rem;
 	}
 
-	.experience .period {
+	.xp-top .at {
 		color: var(--gray-400);
-		font-size: 0.9rem;
-		margin-bottom: 0.5rem;
+		font-weight: 400;
 	}
 
-	.experience ul {
-		margin-top: 0.5rem;
-		padding-left: 1.5rem;
+	.xp-top .company {
+		color: var(--accent-regular);
 	}
 
-	.experience ul li {
-		margin-bottom: 0.25rem;
+	.period {
+		font-size: var(--text-sm);
+		font-weight: 500;
 		color: var(--gray-300);
+		white-space: nowrap;
+	}
+
+	.meta {
+		margin-top: 0.35rem;
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+	}
+
+	.summary {
+		margin-top: 0.85rem;
+		color: var(--gray-200);
+	}
+
+	.highlights {
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.highlights li {
+		position: relative;
+		padding-left: 1.35rem;
+		color: var(--gray-300);
+		font-size: var(--text-base);
+	}
+
+	.highlights li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.55em;
+		width: 0.4rem;
+		height: 0.4rem;
+		border-radius: 999rem;
+		background: var(--accent-regular);
+	}
+
+	@media (min-width: 50em) {
+		.xp-card {
+			padding: 2rem;
+		}
+
+		.xp-top h3 {
+			font-size: var(--text-xl);
+		}
+	}
+
+	/* Skills */
+	.skills-grid {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.skill-group {
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skill-group h3 {
+		font-size: var(--text-md);
+		color: var(--gray-0);
+		margin-bottom: 1rem;
 	}
 
 	.skills {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1rem;
-		margin-top: 10px;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
+		gap: 0.6rem;
 	}
 
 	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
+		.skills-grid {
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
 		}
+	}
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+	/* Formation */
+	.formation-card {
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		box-shadow: var(--shadow-sm);
+	}
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
+	.formation-card h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+	}
+
+	.formation-card p {
+		margin-top: 0.25rem;
+		color: var(--gray-300);
 	}
 </style>

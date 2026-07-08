@@ -1,46 +1,77 @@
 ---
 import '../styles/global.css';
 
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
-
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	image?: string | undefined;
 }
 
 const {
 	title = 'Jérémy Cartallier | Développeur React',
 	description = "Portfolio de Jérémy Cartallier, développeur React spécialisé en interfaces front-end maintenables et performantes.",
+	image = '/assets/portrait.jpg',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.site);
+
+const personSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Jérémy Cartallier',
+	url: Astro.site?.toString(),
+	image: socialImageURL.toString(),
+	jobTitle: 'Développeur React',
+	description,
+	email: 'pro@jeremy-cartallier.fr',
+	knowsAbout: ['React', 'TypeScript', 'React Native', 'JavaScript', 'Front-end', 'UI/UX'],
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'Lyon',
+		addressCountry: 'FR',
+	},
+};
 ---
 
-<!-- Google tag (gtag.js) -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-Y29Z324GMS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(...args: any[]) {
-    window.dataLayer.push(args);
-  }
-  gtag('js', new Date());
-  gtag('config', 'G-Y29Z324GMS');
-</script>
+<!-- Global Metadata -->
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Primary meta tags -->
 <title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="author" content="Jérémy Cartallier" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content="Jérémy Cartallier" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={socialImageURL} />
+<meta property="og:locale" content="fr_FR" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImageURL} />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
 	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
 	rel="stylesheet"
 />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)} />
 <script is:inline>
 	// This code is inlined in the head to make dark mode instant & blocking.
 	const getThemePreference = () => {

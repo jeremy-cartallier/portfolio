@@ -29,12 +29,13 @@ const projects = (await getCollection('work'))
 	title="Jérémy Cartallier | Développeur React"
 	description="Développeur React et TypeScript, j'accompagne les équipes produit dans la conception d'interfaces maintenables, performantes et orientées utilisateur."
 >
-	<div class="stack gap-20 lg:gap-48">
+	<div class="stack gap-20">
+		<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
 					title="Développeur React"
-					tagline="Je conçois des interfaces web robustes, lisibles et évolutives, avec une attention particulière portée à la qualité du code, à l'expérience utilisateur et à la maintenabilité."
+					tagline="Développeur front-end React & TypeScript, je conçois des interfaces robustes, lisibles et évolutives, au service du produit, de l'utilisateur et des équipes."
 					align="start"
 				>
 					<div class="roles">
@@ -59,11 +60,11 @@ const projects = (await getCollection('work'))
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Projets récents</h3>
-					<p>Quelques réalisations menées en entreprise ou en mission, sur des sujets e-commerce, produit et visualisation de données.</p>
+					<p>Une sélection de réalisations menées en entreprise et en mission : e-commerce, produit SaaS et visualisation de données.</p>
 				</header>
 
 				<div class="gallery">
-					<Grid variant="offset">
+					<Grid>
 						{
 							projects.map((project) => (
 								<li>
@@ -82,6 +83,7 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 		</main>
+		</div>
 
 		<ContactCTA />
 	</div>

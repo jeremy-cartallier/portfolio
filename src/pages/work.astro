@@ -14,7 +14,7 @@ const projects = (await getCollection('work')).sort(
 ---
 
 <BaseLayout
-	title="Projets"
+	title="Projets | Jérémy Cartallier"
 	description="Une sélection de projets menés par Jérémy Cartallier en environnement produit, e-commerce et freelance."
 >
 	<div class="stack gap-20">
@@ -24,7 +24,7 @@ const projects = (await getCollection('work')).sort(
 				tagline="Des projets réalisés en entreprise et en mission, avec un focus sur la qualité d'implémentation, la clarté des interfaces et la maintenabilité." 
 				align="start"
 			/>
-			<Grid variant="offset">
+			<Grid>
 				{
 					projects.map((project) => (
 						<li>
